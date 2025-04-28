@@ -1,13 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
-void 
-
 
 void solve(int tc)
 {
-   
+    string a[3];
+    for (int i = 0; i < 3; i++) {
+        cin >> a[i];
+    }
+    for (int i = 0; i < 3; i++) {
+        cout << a[i][0];
+    }
 }
-
 signed main()
 {
     ios_base::sync_with_stdio(0); cin.tie(0);
@@ -18,7 +21,7 @@ signed main()
     for(tc = 1; tc <= tt; tc++)
     {
         solve(tc);
-        cout << endl;
+        cout << '\n';
     }
 
     return 0;
