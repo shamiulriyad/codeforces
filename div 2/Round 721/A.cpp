@@ -1,17 +1,24 @@
 #include <bits/stdc++.h>
 using namespace std;
-int T,n,a[1000005];
-
 
 void solve(int tc)
 {
-    cin>>n;
-		for(int i=1;i<=n;i++)cin>>a[i];
-		for(int i=1;i<=n/2;i++){
-			if(a[i]<a[n-i+1])(i&1)?cout<<"LR":cout<<"RL";
-			else (i&1)?cout<<"RL":cout<<"LR";
-		}if(n&1)cout<<"L";cout<<"\n";
+    int n;
+    cin >> n;
+    int ans=n;
+    
+    for(int i=n;i>0;i=(i&(i-1))){
+      ans= i;
+       if((i&(i-1))==0){
+        ans=i-1;
+        break;
+       }
+       
+    }
+    cout << ans << endl;
+   
 }
+
 signed main()
 {
     ios_base::sync_with_stdio(0); cin.tie(0);
